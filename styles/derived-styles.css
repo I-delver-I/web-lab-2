@@ -10,17 +10,15 @@ header {
     min-height: 100px;
     padding: 40px;
     background-color: blue;
-    display: flex;
-    align-items: center;
     border: 10px solid green;
     border-style: ridge;
     background-image: url(../img/header-background.jpg);
     color: red;
-    background-size: cover;
 }
 
 main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 80% 20%;
 }
 
 footer {
@@ -33,14 +31,13 @@ footer {
 }
 
 .content-area {
-    display: grid;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .top__content-area {
     display: flex;
-    flex-wrap: wrap;
-    min-height: 350px;
+    height: 100%;
 }
 
 .left__top__content-area {
@@ -71,7 +68,6 @@ footer {
 
 .side-area {
     text-align: center;
-    width: 20%;
     min-width: 90px;
     background-image: url(../img/nav-panel-background.jpg);
 }
@@ -95,11 +91,14 @@ h2 {
     color: darkorange;
 }
 
-a {
+a:not(.picture) {
     display: block;
     font-size: 15pt;
+    margin-top: 30px;
     margin-left: 3px;
+    margin-bottom: 30px;
     color: yellow;
+    word-wrap: break-word;
 }
 
 a.bar {
@@ -139,6 +138,20 @@ ol, ul {
     font-size: 20pt;
     column-count: 2;
     column-gap: 30px;
+}
+
+@media screen and (max-width: 500px) {
+    .top__content-area {
+        flex-wrap: wrap;
+    }
+
+    .left__top__content-area {
+        width: 100%;
+    }
+
+    .right__top__content-area {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 850px) {
