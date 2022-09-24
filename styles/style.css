@@ -153,7 +153,6 @@ ol, ul {
 
 @media screen and (max-width: 850px) {
     ol, ul {
-        word-break: break-all;
         column-count: 1;
     }
 }
