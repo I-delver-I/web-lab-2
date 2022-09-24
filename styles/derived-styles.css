@@ -4,6 +4,9 @@
 
 body, html {
     margin: 0;
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+    height: 100vh;
 }
 
 header {
@@ -14,6 +17,7 @@ header {
     border-style: ridge;
     background-image: url(../img/header-background.jpg);
     color: red;
+    background-size: cover;
 }
 
 main {
@@ -22,7 +26,6 @@ main {
 }
 
 footer {
-    min-height: 100px;
     background-color: green;
     padding: 40px;
     border: 5px solid yellow;
@@ -47,6 +50,7 @@ footer {
     border-right: 5px solid violet;
     border-style: groove;
     background-image: url(../img/gardenofeden.jpg);
+    background-size: cover;
 }
 
 .right__top__content-area {
@@ -56,19 +60,20 @@ footer {
     border-left: 5px solid violet;
     border-style: groove;
     background-image: url(../img/hell-layers.jpg);
+    background-size: cover;
 }
 
 .bottom__content-area {
     padding: 10px;
     font-size: 15pt;
-    height: auto;
+    text-align: justify;
     background-color: black;
     color: white;
 }
 
 .side-area {
     text-align: center;
-    max-width: 200px;
+    background-size: cover;
     background-image: url(../img/nav-panel-background.jpg);
 }
 
@@ -130,7 +135,7 @@ a:link {
     flex-direction: column;
     background-color: blue;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     font-weight: bold;
     border-radius: 5%;
     background: rgb(34,193,195);
