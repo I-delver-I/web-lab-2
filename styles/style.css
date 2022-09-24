@@ -18,7 +18,7 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 85% 15%;
 }
 
 footer {
@@ -65,7 +65,7 @@ footer {
 
 .side-area {
     text-align: center;
-    min-width: 50px;
+    max-width: 200px;
     background-image: url(../img/nav-panel-background.jpg);
 }
 
