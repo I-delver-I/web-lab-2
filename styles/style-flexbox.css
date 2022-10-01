@@ -4,7 +4,6 @@
 }
 
 body {
-    margin: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -22,7 +21,7 @@ header {
 
 main {
     display: flex;
-    /* height: 100%; */
+    /* height: auto; */
 }
 
 footer {
@@ -37,12 +36,25 @@ footer {
     display: flex;
     flex-direction: column;
     width: 80vw;
+    height: 80%;
+}
+
+.bottom__content-area {
+    max-height: 20vh;
+    background-color: black;
+    object-fit: cover;
+}
+
+.side-area {
+    width: 20vw;
+    text-align: center;
+    background-image: url(../img/nav-panel-background.jpg);
+    background-size: cover;
 }
 
 .top__content-area {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
 }
 
 .left__top__content-area {
@@ -62,24 +74,6 @@ footer {
     border-left: 5px solid violet;
     border-style: groove;
     background-image: url(../img/hell-layers.jpg);
-    background-size: cover;
-}
-
-.bottom__content-area {
-    max-height: 20vh;
-    padding: 10px;
-    font-size: 15pt;
-    text-align: justify;
-    background-color: black;
-    color: white;
-    object-fit: cover;
-    height: 100%;
-}
-
-.side-area {
-    width: 20vw;
-    text-align: center;
-    background-image: url(../img/nav-panel-background.jpg);
     background-size: cover;
 }
 
