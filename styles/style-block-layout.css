@@ -4,14 +4,15 @@
 }
 
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    display: table;
 }
 
 header {
+    display: table-header-group;
     padding: 40px;
+    height: 20vh;
     background-color: blue;
     border: 10px solid green;
     border-style: ridge;
@@ -21,11 +22,18 @@ header {
 }
 
 main {
-    display: flex;
-    /* height: 100%; */
+    width: 100vw;
+    display: table-row-group;
+}
+
+.main {
+    display: block;
 }
 
 footer {
+    width: 100vw;
+    height: 20vh;
+    display: table-footer-group;
     background-color: green;
     padding: 40px;
     border: 5px solid yellow;
@@ -34,49 +42,57 @@ footer {
 }
 
 .content-area {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-}
-
-.top__content-area {
-    display: flex;
-    flex-wrap: wrap;
+    display: table-cell;
     height: 100%;
 }
 
+.top__content-area {
+    display: table-row;
+    height: 80%;
+}
+
 .left__top__content-area {
-    background-color: blueviolet;
-    width: 50%;
-    display: flex;
+    padding: 5%;
+    display: table-cell;
+    width: 40vw;
+    /* height: 45vh; */
     border-right: 5px solid violet;
-    border-style: groove;
+    background-color: blueviolet;
     background-image: url(../img/gardenofeden.jpg);
+    vertical-align: middle;
+    border-style: groove;
     background-size: cover;
 }
 
 .right__top__content-area {
-    background-color: yellow;
-    width: 50%;
-    display: flex;
+    padding: 5%;
+    display: table-cell;
+    width: 40vw;
+    /* height: 45vh; */
     border-left: 5px solid violet;
-    border-style: groove;
+    background-color: yellow;
     background-image: url(../img/hell-layers.jpg);
+    vertical-align: middle;
+    border-style: groove;
     background-size: cover;
 }
 
 .bottom__content-area {
-    max-height: 20vh;
+    display: table;
+    width: 80vw;
+    /* height: 20%; */
     padding: 10px;
     font-size: 15pt;
     text-align: justify;
     background-color: black;
     color: white;
     object-fit: cover;
-    height: 100%;
+    vertical-align: middle;
 }
 
 .side-area {
+    display: table-cell;
+    height: 60vh;
     width: 20vw;
     text-align: center;
     background-image: url(../img/nav-panel-background.jpg);
@@ -89,6 +105,7 @@ p {
 }
 
 h1 {
+    /* display: inline-block; */
     font-style: italic;
     color: red;
     border: 3px solid red;
@@ -124,19 +141,9 @@ a:link {
     text-decoration: none;
 }
 
-.content {
-    margin: 5%;
+iframe {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: blue;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    border-radius: 5%;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%,
-        rgba(253,244,45,0.13489145658263302) 100%);
+    height: 100%;
 }
 
 ol, ul {
@@ -146,19 +153,13 @@ ol, ul {
 }
 
 @media screen and (max-width: 500px) {
-    .left__top__content-area {
+    /* .left__top__content-area {
         width: 100%;
     }
 
     .right__top__content-area {
         width: 100%;
-    }
-}
-
-@media screen and (max-width: 850px) {
-    ol, ul {
-        column-count: 1;
-    }
+    } */
 }
 
 img {

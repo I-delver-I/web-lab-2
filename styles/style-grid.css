@@ -4,9 +4,8 @@
 }
 
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: max-content repeat(2, auto);
     height: 100vh;
 }
 
@@ -21,8 +20,8 @@ header {
 }
 
 main {
-    display: flex;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 80vw 1fr;
 }
 
 footer {
@@ -31,57 +30,52 @@ footer {
     border: 5px solid yellow;
     border-style: dotted;
     color: yellow;
-}
-
-.content-area {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-}
-
-.top__content-area {
-    display: flex;
-    flex-wrap: wrap;
     height: 100%;
 }
 
-.left__top__content-area {
-    background-color: blueviolet;
-    width: 50%;
-    display: flex;
-    border-right: 5px solid violet;
-    border-style: groove;
-    background-image: url(../img/gardenofeden.jpg);
-    background-size: cover;
+.content-area {
+    display: grid;
+    grid-template-rows: auto auto;
+    transform: translate(0, -25%);
 }
 
-.right__top__content-area {
-    background-color: yellow;
-    width: 50%;
-    display: flex;
-    border-left: 5px solid violet;
-    border-style: groove;
-    background-image: url(../img/hell-layers.jpg);
-    background-size: cover;
+.top__content-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .bottom__content-area {
-    max-height: 20vh;
     background-color: black;
     padding: 10px;
     font-size: 15pt;
     text-align: justify;
-    background-color: black;
     color: white;
     object-fit: cover;
-    height: 100%;
 }
 
 .side-area {
-    width: 20vw;
+    display: grid;
     text-align: center;
     background-image: url(../img/nav-panel-background.jpg);
     background-size: cover;
+}
+
+.left__top__content-area, .right__top__content-area {
+    border-style: groove;
+    background-size: cover;
+    padding: 5%;
+}
+
+.left__top__content-area {
+    border-right: 5px solid violet;
+    background-color: blueviolet;
+    background-image: url(../img/gardenofeden.jpg);
+}
+
+.right__top__content-area {
+    border-left: 5px solid violet;
+    background-color: yellow;
+    background-image: url(../img/hell-layers.jpg);
 }
 
 p {
@@ -104,13 +98,12 @@ h2 {
 }
 
 a {
-    display: block;
+    display: grid;
     font-size: 15pt;
     margin-top: 30px;
     margin-left: 3px;
     margin-bottom: 30px;
     color: yellow;
-    word-wrap: break-word;
 }
 
 a:hover, a:visited:hover {
@@ -126,13 +119,9 @@ a:link {
 }
 
 .content {
-    margin: 5%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
     background-color: blue;
-    justify-content: center;
-    align-items: center;
     font-weight: bold;
     border-radius: 5%;
     background: rgb(34,193,195);
@@ -147,12 +136,9 @@ ol, ul {
 }
 
 @media screen and (max-width: 500px) {
-    .left__top__content-area {
-        width: 100%;
-    }
-
-    .right__top__content-area {
-        width: 100%;
+    .top__content-area {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
     }
 }
 

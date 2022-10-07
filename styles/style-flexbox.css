@@ -21,7 +21,6 @@ header {
 
 main {
     display: flex;
-    /* height: auto; */
 }
 
 footer {
@@ -30,17 +29,24 @@ footer {
     border: 5px solid yellow;
     border-style: dotted;
     color: yellow;
+    height: 100%;
 }
 
 .content-area {
     display: flex;
     flex-direction: column;
     width: 80vw;
+    height: max-content;
+}
+
+.top__content-area {
+    display: flex;
+    flex-wrap: wrap;
     height: 80%;
 }
 
 .bottom__content-area {
-    max-height: 20vh;
+    height: 20vh;
     background-color: black;
     object-fit: cover;
 }
@@ -52,29 +58,23 @@ footer {
     background-size: cover;
 }
 
-.top__content-area {
-    display: flex;
-    flex-wrap: wrap;
+.left__top__content-area, .right__top__content-area {
+    width: 50%;
+    border-style: groove;
+    background-size: cover;
+    padding: 5%;
 }
 
 .left__top__content-area {
     background-color: blueviolet;
-    width: 50%;
-    display: flex;
     border-right: 5px solid violet;
-    border-style: groove;
     background-image: url(../img/gardenofeden.jpg);
-    background-size: cover;
 }
 
 .right__top__content-area {
     background-color: yellow;
-    width: 50%;
-    display: flex;
     border-left: 5px solid violet;
-    border-style: groove;
     background-image: url(../img/hell-layers.jpg);
-    background-size: cover;
 }
 
 p {
@@ -103,7 +103,6 @@ a {
     margin-left: 3px;
     margin-bottom: 30px;
     color: yellow;
-    word-wrap: break-word;
 }
 
 a:hover, a:visited:hover {
@@ -119,9 +118,8 @@ a:link {
 }
 
 .content {
-    margin: 5%;
     width: 100%;
-    display: flex;
+    height: 100%;
     flex-direction: column;
     background-color: blue;
     justify-content: center;
