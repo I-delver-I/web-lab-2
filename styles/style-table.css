@@ -1,18 +1,17 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
-    min-height: 100vh;
-    width: 100vw;
-    display: table;
+    height: 100vh;
+    /* width: 100%; */
 }
 
 header {
-    display: table-header-group;
+    height: 100%;
     padding: 40px;
-    height: 20vh;
     background-color: blue;
     border: 10px solid green;
     border-style: ridge;
@@ -21,19 +20,8 @@ header {
     background-size: cover;
 }
 
-main {
-    width: 100vw;
-    display: table-row-group;
-}
-
-.main {
-    display: block;
-}
-
 footer {
-    width: 100vw;
-    height: 20vh;
-    display: table-footer-group;
+    height: 100%;
     background-color: green;
     padding: 40px;
     border: 5px solid yellow;
@@ -41,77 +29,70 @@ footer {
     color: yellow;
 }
 
-.content-area {
-    display: table-cell;
+table {
+    border-collapse: collapse;
     height: 100%;
+    width: 100%;
+}
+
+td {
+    height: max-content;
+}
+
+.content-area {
+    min-height: 50vh;
 }
 
 .top__content-area {
-    display: table-row;
-    height: 80%;
+    height: 100%;
 }
 
 .left__top__content-area {
-    padding: 5%;
-    display: table-cell;
-    width: 40vw;
-    /* height: 45vh; */
+    min-height: 40vh;
     border-right: 5px solid violet;
-    background-color: blueviolet;
     background-image: url(../img/gardenofeden.jpg);
-    vertical-align: middle;
     border-style: groove;
     background-size: cover;
 }
 
 .right__top__content-area {
-    padding: 5%;
-    display: table-cell;
-    width: 40vw;
-    /* height: 45vh; */
+    min-height: 40vh;
     border-left: 5px solid violet;
-    background-color: yellow;
     background-image: url(../img/hell-layers.jpg);
-    vertical-align: middle;
     border-style: groove;
     background-size: cover;
 }
 
 .bottom__content-area {
-    display: table;
-    width: 80vw;
-    /* height: 20%; */
+    max-height: max-content;
     padding: 10px;
     font-size: 15pt;
     text-align: justify;
     background-color: black;
     color: white;
     object-fit: cover;
-    vertical-align: middle;
 }
 
 .side-area {
-    display: table-cell;
-    height: 60vh;
     width: 20vw;
     text-align: center;
     background-image: url(../img/nav-panel-background.jpg);
     background-size: cover;
-}
+} 
 
 p {
+    color: yellow;
     font-size: 14pt;
     text-align: justify;
 }
 
 h1 {
-    /* display: inline-block; */
     font-style: italic;
     color: red;
     border: 3px solid red;
     padding: 5px;
     margin: 10px;
-    width: fit-content;
+    width: max-content;
 }
 
 h2 {
