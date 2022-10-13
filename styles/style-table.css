@@ -134,13 +134,13 @@ ol, ul {
 }
 
 @media screen and (max-width: 500px) {
-    /* .left__top__content-area {
-        width: 100%;
+    .left__top__content-area {
+        display: block;
     }
 
     .right__top__content-area {
-        width: 100%;
-    } */
+        display: block;
+    }
 }
 
 img {

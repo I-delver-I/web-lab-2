@@ -65,20 +65,28 @@ footer {
     background-size: cover;
 }
 
-.left__top__content-area, .right__top__content-area {
-    border-style: groove;
-    background-size: cover;
-    padding: 5%;
+.left__top__content-area a {
+    margin: 0;
+    height: 100%;
+}
+
+.right__top__content-area a {
+    margin: 0;
+    height: 100%;
 }
 
 .left__top__content-area {
     border-right: 5px solid violet;
     background-image: url(../img/gardenofeden.jpg);
+    background-size: cover;
+    border-style: groove;
 }
 
 .right__top__content-area {
     border-left: 5px solid violet;
     background-image: url(../img/hell-layers.jpg);
+    background-size: cover;
+    border-style: groove;
 }
 
 p {
