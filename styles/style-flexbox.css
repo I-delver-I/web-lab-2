@@ -7,13 +7,13 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 100vw;
 }
 
 header {
     display: flex;
     align-items: center;
     padding: 40px;
-    background-color: blue;
     border: 10px solid green;
     border-style: ridge;
     background-image: url(../img/header-background.jpg);
@@ -39,7 +39,7 @@ footer {
 .content-area {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    /* width: 80vw; */
     height: 100%;
 }
 
@@ -142,6 +142,14 @@ ol, ul {
 }
 
 @media screen and (max-width: 500px) {
+    header {
+        flex-direction: column;
+    }
+    
+    footer {
+        flex-direction: column;
+    }
+
     .left__top__content-area {
         width: 100%;
     }

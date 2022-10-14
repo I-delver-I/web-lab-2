@@ -5,16 +5,15 @@
 
 body {
     display: grid;
-    grid-template-rows: max-content repeat(2, auto);
+    grid-template-rows: max-content repeat(2, max-content);
     height: 100vh;
 }
 
 header {
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: repeat(2, auto);
     align-items: center;
     padding: 40px;
-    background-color: blue;
     border: 10px solid green;
     border-style: ridge;
     background-image: url(../img/header-background.jpg);
@@ -24,7 +23,7 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 80vw 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 footer {

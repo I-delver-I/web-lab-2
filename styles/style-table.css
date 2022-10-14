@@ -6,13 +6,11 @@
 
 body {
     height: 100vh;
-    /* width: 100%; */
 }
 
 header {
     height: 100%;
     padding: 40px;
-    background-color: blue;
     border: 10px solid green;
     border-style: ridge;
     background-image: url(../img/header-background.jpg);
@@ -40,7 +38,8 @@ td {
 }
 
 .content-area {
-    min-height: 50vh;
+    min-height: 100vh;
+    /* height: 100%; */
 }
 
 .top__content-area {
@@ -48,7 +47,6 @@ td {
 }
 
 .left__top__content-area {
-    min-height: 40vh;
     border-right: 5px solid violet;
     background-image: url(../img/gardenofeden.jpg);
     border-style: groove;
@@ -56,7 +54,6 @@ td {
 }
 
 .right__top__content-area {
-    min-height: 40vh;
     border-left: 5px solid violet;
     background-image: url(../img/hell-layers.jpg);
     border-style: groove;
@@ -64,7 +61,7 @@ td {
 }
 
 .bottom__content-area {
-    max-height: max-content;
+    height: max-content;
     padding: 10px;
     font-size: 15pt;
     text-align: justify;
@@ -136,10 +133,12 @@ ol, ul {
 @media screen and (max-width: 500px) {
     .left__top__content-area {
         display: block;
+        height: 50%;   
     }
 
     .right__top__content-area {
         display: block;
+        height: 50%;
     }
 }
 
