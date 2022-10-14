@@ -35,6 +35,7 @@ table {
 
 td {
     height: max-content;
+    text-align: right;
 }
 
 .content-area {
@@ -80,6 +81,10 @@ p {
     color: yellow;
     font-size: 14pt;
     text-align: justify;
+}
+
+p {
+    text-align: right;
 }
 
 h1 {

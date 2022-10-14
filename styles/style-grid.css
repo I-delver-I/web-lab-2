@@ -5,13 +5,14 @@
 
 body {
     display: grid;
-    grid-template-rows: max-content repeat(2, max-content);
+    grid-template-rows: max-content auto max-content;
     height: 100vh;
 }
 
 header {
     display: grid;
     grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
     align-items: center;
     padding: 40px;
     border: 10px solid green;
@@ -23,12 +24,13 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 6fr 1fr;
 }
 
 footer {
     display: grid;
     grid-template-columns: auto auto;
+    justify-content: space-between;
     align-items: center;
     background-color: green;
     padding: 40px;
